@@ -1,0 +1,149 @@
+<!doctype html>
+
+<html>
+  
+  <head>
+    <title>Off Canvas Nav</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/amelia/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      /*       * Style tweaks       * --------------------------------------------------       */
+      body {
+        padding-top: 70px;
+      }
+      footer {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      /*       * Off Canvas       * --------------------------------------------------       */
+      @media screen and(max-width: 768px) {
+        .row-offcanvas {
+          position: relative;
+          -webkit-transition: all 0.25s ease-out;
+          -moz-transition: all 0.25s ease-out;
+          transition: all 0.25s ease-out;
+        }
+        .row-offcanvas-right .sidebar-offcanvas {
+          right: -50%;
+          /* 6 columns */
+        }
+        .row-offcanvas-left .sidebar-offcanvas {
+          left: -50%;
+          /* 6 columns */
+        }
+        .row-offcanvas-right.active {
+          right: 50%;
+          /* 6 columns */
+        }
+        .row-offcanvas-left.active {
+          left: 50%;
+          /* 6 columns */
+        }
+        .sidebar-offcanvas {
+          position: absolute;
+          top: 0;
+          width: 50%;
+          /* 6 columns */
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SGaSy</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="index.html">Demo</a>
+            </li>
+            <li>
+              <a href="howto.html">How-To</a>
+            </li>
+            <li>
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.nav-collapse -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.navbar -->
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button></p>
+          <div class="jumbotron">
+            <h1><font size="17">Smart Gardening System</font></h1>
+            <p><b>Welcome to SGaSy - the Smart Gardening System! <br>                          SGaSy enables you to take after your garden whenever you want, wherever you are!                                                  </b></p>
+          </div><br>
+          <p>
+          <h1>Status</h1>
+          <ul class="list-group">
+            <li class="list-group-item">Soil Humidity<div class="progress">
+  <div class="progress-bar" style="width: 50%;"></div>
+</div></li>
+            <li class="list-group-item">Air Temperature<div class="progress">
+  <div class="progress-bar" style="width: 80%;"></div>
+</div></li>
+            <li class="list-group-item">CO<sub>2</sub> Concentration<div class="progress">
+  <div class="progress-bar" style="width: 2%;"></div>
+</div></li>
+          </ul>
+          <h1>Actions</h1>
+          <a class="btn btn-primary">Water</a>
+          <h1>Logs</h1>
+          <table><tbody>
+          <tr>
+            <td style="min-width: 200px">Time</td>
+            <td style="min-width: 200px">Action</td>
+            <td style="min-width: 200px">Action Type</td>
+          </tr>
+          <tr>
+            <td>22:22 25 Oct 2014    </td>
+            <td>Watering</td>
+            <td>Automatic</td>
+          </tr>
+          </tbody></table>
+          
+          <h1>Live camera of garden</h1></p>
+          <img src="https://builder.divshot.com/img/placeholder-100x100.gif" width="640" height="480" border="0" alt="LiveCam"><br />
+          
+        </div>
+        <!--/row-->
+      </div>
+      <!--/span-->
+      <!--/span-->
+    </div>
+    <!--/row-->
+    <hr>
+    <footer>
+      <p>&copy; Aenon Designs Workshop 2014</p>
+    </footer>
+    <!--/.container-->
+    <script>
+      $(document).ready(function() {
+        $('[data-toggle=offcanvas]').click(function() {
+          $('.row-offcanvas').toggleClass('active');
+        });
+      });
+    </script>
+  </body>
+
+</html>
