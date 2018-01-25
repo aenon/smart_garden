@@ -1,1 +1,1 @@
-# smart_garden
+# Smart gardening system
